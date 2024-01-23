@@ -17,4 +17,4 @@
    cd build
    cmake ..
    ```
-5. Open the solution file ¡°../build/RemoteCli.sln¡± and build it
+5. Open the solution file `../build/RemoteCli.sln` and build it
