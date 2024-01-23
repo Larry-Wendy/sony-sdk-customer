@@ -16,7 +16,7 @@ namespace fs = std::filesystem;
 #include "CameraDevice.h"
 #include "Text.h"
 #include "sio_client.h"
-
+ 
 namespace SDK = SCRSDK;
 
 const std::string FOLDER_PATH_LOCAL = "C:\\Users\\Jiaro\\Desktop\\PinOn\\sony-sdk-customer\\pictures\\";
@@ -24,6 +24,23 @@ const std::string FOLDER_PATH_LOCAL = "C:\\Users\\Jiaro\\Desktop\\PinOn\\sony-sd
 const std::string FOLDER_PATH_REMOTE = "https://94c4-2603-7000-9900-307c-78e0-566a-393-4a00.ngrok-free.app/pictures/";
 const std::string IMAGE_EXTENSION = ".JPG";
 const int compress_factor = 10;
+
+
+BOOL WINAPI ConsoleHandler(DWORD signal) {
+    if (signal == CTRL_CLOSE_EVENT) {
+        std::cout << "Closing event caught. Performing cleanup..." << std::endl;
+
+        cli::tout << "Release SDK resources.\n";
+        SDK::Release();
+
+        cli::tout << "Exiting application.\n";
+        std::exit(EXIT_SUCCESS);
+
+        std::cout << "Cleanup completed." << std::endl;
+    }
+    return TRUE;
+}
+
 
 std::string intToFiveDigitString(int value) {
     std::ostringstream ss;
@@ -87,7 +104,7 @@ std::shared_ptr<cli::CameraDevice> InitializeCamera() {
     CameraDevicePtr camera = CameraDevicePtr(new cli::CameraDevice(cameraNumUniq, camera_info));
 
     camera_list->Release();
-
+ 
     camera->connect(SDK::CrSdkControlMode_Remote, SDK::CrReconnecting_ON);
     Sleep(2000);
 
@@ -96,6 +113,10 @@ std::shared_ptr<cli::CameraDevice> InitializeCamera() {
 
 int main()
 {
+    if (!SetConsoleCtrlHandler(ConsoleHandler, TRUE)) {
+        std::cerr << "ERROR: Could not set control handler" << std::endl;
+        return 1;
+    }
 
     auto camera = InitializeCamera();
     if (!camera) {
@@ -130,7 +151,7 @@ int main()
             return crow::response(400, result);
         }
         std::random_device rd;
-        std::mt19937 gen(rd());
+        std::mt19937 gen(rd()); 
         std::uniform_int_distribution<> distrib(1, 9999);
 
         int seq_number = distrib(gen);
