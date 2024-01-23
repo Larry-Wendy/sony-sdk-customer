@@ -2,4 +2,4 @@ build
 out
 .vs
 pictures/*
-!pictures/.gitign
+!pictures/.gitignore

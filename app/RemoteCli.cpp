@@ -11,6 +11,7 @@ namespace fs = std::filesystem;
 #include <random>
 #include <opencv2/opencv.hpp>
 #include "crow.h"
+#include "crow/middlewares/cors.h"
 #include "CRSDK/CameraRemote_SDK.h"
 #include "CameraDevice.h"
 #include "Text.h"
@@ -100,7 +101,25 @@ int main()
         std::exit(EXIT_FAILURE);
     }
 
-    crow::SimpleApp app; //define your crow application
+    crow::App<crow::CORSHandler> app;
+
+    // Customize CORS
+    auto& cors = app.get_middleware<crow::CORSHandler>();
+
+    // clang-format off
+    cors
+        .global()
+        .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
+        .methods("POST"_method, "GET"_method)
+        .prefix("/cors")
+        .origin("example.com")
+        .prefix("/nocors")
+        .ignore();
+
+    CROW_ROUTE(app, "/")
+        ([]() {
+        return "Check Access-Control-Allow-Methods header";
+    });
 
     //define your endpoint at the root directory
     CROW_ROUTE(app, "/take_photo").methods("POST"_method)([&camera](const crow::request& req) {
@@ -149,12 +168,22 @@ int main()
         return crow::response{ result };
         });
 
+
+    CROW_ROUTE(app, "/exit")([]() {
+        cli::tout << "Release SDK resources.\n";
+        SDK::Release();
+
+        cli::tout << "Exiting application.\n";
+        std::exit(EXIT_SUCCESS);
+        return "Exit";
+    });
+
     //set the port, set the app to run on multiple threads, and run the app
     app.port(18080).multithreaded().run();
 
-    cli::tout << "Release SDK resources.\n";
-    SDK::Release();
+    //cli::tout << "Release SDK resources.\n";
+    //SDK::Release();
 
-    cli::tout << "Exiting application.\n";
-    std::exit(EXIT_SUCCESS);
+    //cli::tout << "Exiting application.\n";
+    //std::exit(EXIT_SUCCESS);
 }
