@@ -46,12 +46,14 @@ cli::text convertStringToText(std::string input) {
     return w_string.c_str();
 }
 
-void readAndCompressImage(std::string image_path) {
+cv::Mat readImage(std::string image_path) {
     cv::Mat image = cv::imread(image_path);
     if (image.empty()) {
-        std::cerr << "Could not read the image: " << image_path << std::endl;
-        return;
+        throw std::runtime_error("Could not read the image!");
     }
+    return image;
+}
+void compressImage(cv::Mat image, std::string image_path) {
     cv::Mat resized_image;
     cv::Size size(image.cols / compress_factor, image.rows / compress_factor);
     cv::resize(image, resized_image, size);
@@ -109,12 +111,9 @@ int main()
     // clang-format off
     cors
         .global()
-        .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
+        .headers("Content-Type", "Authorization")
         .methods("POST"_method, "GET"_method)
-        .prefix("/cors")
-        .origin("example.com")
-        .prefix("/nocors")
-        .ignore();
+        .origin("*");
 
     CROW_ROUTE(app, "/")
         ([]() {
@@ -127,7 +126,6 @@ int main()
         crow::json::wvalue result;
 
         if (!request_data || !request_data.has("isCompress")) {
-            result["status"] = "error";
             result["message"] = "Invalid request data";
             return crow::response(400, result);
         }
@@ -138,32 +136,37 @@ int main()
         int seq_number = distrib(gen);
         bool is_compress = request_data["isCompress"].b();
 
+        std::string seq_str = intToFiveDigitString(seq_number);
+        std::string now_time = getCurrentDateTime();
+        std::string image_path_local = FOLDER_PATH_LOCAL + now_time + seq_str + IMAGE_EXTENSION;
+        std::string image_path_remote = FOLDER_PATH_REMOTE + now_time + seq_str + IMAGE_EXTENSION;
+        std::cout << image_path_local << "\n";
+
+        cli::text folder_path = convertStringToText(FOLDER_PATH_LOCAL);
+        cli::text time_prefix = convertStringToText(now_time);
+        camera->set_save_info(folder_path, time_prefix, seq_number);
+
+        camera->capture_image();
+        Sleep(1200);
+
+        cv::Mat image;
         try {
-            std::string seq_str = intToFiveDigitString(seq_number);
-            std::string now_time = getCurrentDateTime();
-            std::string image_path_local = FOLDER_PATH_LOCAL + now_time + seq_str + IMAGE_EXTENSION;
-            std::string image_path_remote = FOLDER_PATH_REMOTE + now_time + seq_str + IMAGE_EXTENSION;
-            std::cout << image_path_local << "\n";
-
-            cli::text folder_path = convertStringToText(FOLDER_PATH_LOCAL);
-            cli::text time_prefix = convertStringToText(now_time);
-            camera->set_save_info(folder_path, time_prefix, seq_number);
-
-            camera->capture_image();
-            Sleep(1200);
-            if (is_compress) {
-                readAndCompressImage(image_path_local);
-            }
-
-            result["status"] = "success";
-            result["message"] = "Photo taken successfully";
-            result["image_path"] = image_path_remote;
-
+            image = readImage(image_path_local);
         }
-        catch (const std::exception& e) {
-            result["status"] = "error";
+        catch (const std::runtime_error& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
             result["message"] = e.what();
+            return crow::response(500, result);
         }
+        
+
+        if (is_compress) {
+            compressImage(image, image_path_local);
+        }
+
+        result["message"] = "Photo taken successfully";
+        result["image_path"] = image_path_remote;
+
 
         return crow::response{ result };
         });
