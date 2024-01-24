@@ -23,6 +23,8 @@ const std::string FOLDER_PATH_LOCAL = "C:\\Users\\Jiaro\\Desktop\\PinOn\\sony-sd
 //const std::string FOLDER_PATH_REMOTE = "https://94c4-2603-7000-9900-307c-78e0-566a-393-4a00.ngrok-free.app/pictures/";
 const std::string IMAGE_EXTENSION = ".JPG";
 const int compress_factor = 10;
+const int resize_width = 1620;
+const int resize_height = 1080;
 const int port = 18080;
 const std::string host = "127.0.0.1";
 
@@ -73,7 +75,8 @@ cv::Mat readImage(std::string image_path) {
 }
 void compressImage(cv::Mat image, std::string image_path) {
     cv::Mat resized_image;
-    cv::Size size(image.cols / compress_factor, image.rows / compress_factor);
+    //cv::Size size(image.cols / compress_factor, image.rows / compress_factor);
+    cv::Size size(resize_width, resize_height);
     cv::resize(image, resized_image, size);
 
     cv::imwrite(image_path, resized_image);
