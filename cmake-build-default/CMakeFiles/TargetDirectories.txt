@@ -1,0 +1,6 @@
+C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/RemoteCli.dir
+C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/edit_cache.dir
+C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/rebuild_cache.dir
+C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/list_install_components.dir
+C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/install.dir
+C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/install/local.dir

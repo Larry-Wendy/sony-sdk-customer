@@ -184,7 +184,7 @@ int main()
             result["message"] = e.what();
             return crow::response(500, result);
         }
-        
+
 
         if (is_compress) {
             compressImage(image, image_path_local);
