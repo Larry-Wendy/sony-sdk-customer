@@ -11,7 +11,6 @@ include(enum_crsdk_hdr)
 
 ### VCPKG packages
 include(C:/vcpkg/scripts/buildsystems/vcpkg.cmake)
-find_package(sioclient CONFIG REQUIRED)
 find_package(Crow CONFIG REQUIRED)
 find_package(OpenCV CONFIG REQUIRED)
 
@@ -42,7 +41,6 @@ target_include_directories(${remotecli}
         ${crsdk_hdr_dir} # defined in enum script
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE sioclient::sioclient sioclient::sioclient_tls)
 target_link_libraries(${PROJECT_NAME} PRIVATE Crow::Crow)
 target_link_libraries(${PROJECT_NAME} PRIVATE ${OpenCV_LIBS})
 

@@ -15,15 +15,16 @@ namespace fs = std::filesystem;
 #include "CRSDK/CameraRemote_SDK.h"
 #include "CameraDevice.h"
 #include "Text.h"
-#include "sio_client.h"
  
 namespace SDK = SCRSDK;
 
 const std::string FOLDER_PATH_LOCAL = "C:\\Users\\Jiaro\\Desktop\\PinOn\\sony-sdk-customer\\pictures\\";
 //const std::string FOLDER_PATH_REMOTE = "http://192.168.202.1:3000/pictures/";
-const std::string FOLDER_PATH_REMOTE = "https://94c4-2603-7000-9900-307c-78e0-566a-393-4a00.ngrok-free.app/pictures/";
+//const std::string FOLDER_PATH_REMOTE = "https://94c4-2603-7000-9900-307c-78e0-566a-393-4a00.ngrok-free.app/pictures/";
 const std::string IMAGE_EXTENSION = ".JPG";
 const int compress_factor = 10;
+const int port = 18080;
+const std::string host = "127.0.0.1";
 
 
 BOOL WINAPI ConsoleHandler(DWORD signal) {
@@ -132,7 +133,7 @@ int main()
     // clang-format off
     cors
         .global()
-        .headers("Content-Type", "Authorization")
+        .headers("Content-Type", "Authorization", "ngrok-skip-browser-warning")
         .methods("POST"_method, "GET"_method)
         .origin("*");
 
@@ -159,8 +160,9 @@ int main()
 
         std::string seq_str = intToFiveDigitString(seq_number);
         std::string now_time = getCurrentDateTime();
-        std::string image_path_local = FOLDER_PATH_LOCAL + now_time + seq_str + IMAGE_EXTENSION;
-        std::string image_path_remote = FOLDER_PATH_REMOTE + now_time + seq_str + IMAGE_EXTENSION;
+        std::string image_name = now_time + seq_str + IMAGE_EXTENSION;
+        std::string image_path_local = FOLDER_PATH_LOCAL +image_name;
+        //std::string image_path_remote = FOLDER_PATH_REMOTE + now_time + seq_str + IMAGE_EXTENSION;
         std::cout << image_path_local << "\n";
 
         cli::text folder_path = convertStringToText(FOLDER_PATH_LOCAL);
@@ -186,8 +188,8 @@ int main()
         }
 
         result["message"] = "Photo taken successfully";
-        result["image_path"] = image_path_remote;
-
+        //result["image_path"] = image_path_remote;
+        result["image_path"] = "http://" + host + ":" + std::to_string(port) + "/images/" + image_name;
 
         return crow::response{ result };
         });
@@ -202,8 +204,26 @@ int main()
         return "Exit";
     });
 
+    std::string images_folder = FOLDER_PATH_LOCAL;
+
+    CROW_ROUTE(app, "/images/<string>")([&images_folder](const std::string& filename) {
+        std::string file_path = images_folder + filename;
+        std::ifstream file(file_path, std::ios::binary);
+        if (file) {
+            std::stringstream buffer;
+            buffer << file.rdbuf();
+
+            crow::response resp(buffer.str());
+            resp.set_header("Content-Type", "image/jpeg");  // 适当调整 MIME 类型
+            return resp;
+        }
+        else {
+            return crow::response(404);
+        }
+        });
+
     //set the port, set the app to run on multiple threads, and run the app
-    app.port(18080).multithreaded().run();
+    app.port(port).multithreaded().run();
 
     //cli::tout << "Release SDK resources.\n";
     //SDK::Release();
