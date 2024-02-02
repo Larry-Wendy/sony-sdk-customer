@@ -13,6 +13,7 @@ include(enum_crsdk_hdr)
 include(C:/vcpkg/scripts/buildsystems/vcpkg.cmake)
 find_package(Crow CONFIG REQUIRED)
 find_package(OpenCV CONFIG REQUIRED)
+find_package(cpprestsdk CONFIG REQUIRED)
 
 ### Define output target ###
 set(remotecli "${PROJECT_NAME}")
@@ -43,6 +44,7 @@ target_include_directories(${remotecli}
 
 target_link_libraries(${PROJECT_NAME} PRIVATE Crow::Crow)
 target_link_libraries(${PROJECT_NAME} PRIVATE ${OpenCV_LIBS})
+target_link_libraries(${PROJECT_NAME} PRIVATE cpprestsdk::cpprest cpprestsdk::cpprestsdk_zlib_internal cpprestsdk::cpprestsdk_brotli_internal)
 
 ### Configure external library directories ###
 set(ldir ${CMAKE_CURRENT_SOURCE_DIR}/external)

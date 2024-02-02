@@ -63,8 +63,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-jhyq5k"
-      binary: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-jhyq5k"
+      source: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-6x92tk"
+      binary: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-6x92tk"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -73,11 +73,11 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-jhyq5k'
+        Change Dir: 'C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-6x92tk'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_181cc
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_181cc.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_181cc.dir\\ /FS -c "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_181cc.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_181cc.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_181cc.exe /implib:cmTC_181cc.lib /pdb:cmTC_181cc.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_2b944
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_2b944.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_2b944.dir\\ /FS -c "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_2b944.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_2b944.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_2b944.exe /implib:cmTC_2b944.lib /pdb:cmTC_2b944.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -95,8 +95,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-qzwoe7"
-      binary: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-qzwoe7"
+      source: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-8oc780"
+      binary: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-8oc780"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -109,13 +109,13 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-qzwoe7'
+        Change Dir: 'C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-8oc780'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_ebd77
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ebd77.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_ebd77.dir\\ /FS -c C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-qzwoe7\\src.cxx
-        FAILED: CMakeFiles/cmTC_ebd77.dir/src.cxx.obj 
-        C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ebd77.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_ebd77.dir\\ /FS -c C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-qzwoe7\\src.cxx
-        C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-qzwoe7\\src.cxx(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_ab530
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ab530.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_ab530.dir\\ /FS -c C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-8oc780\\src.cxx
+        FAILED: CMakeFiles/cmTC_ab530.dir/src.cxx.obj 
+        C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ab530.dir\\src.cxx.obj /FdCMakeFiles\\cmTC_ab530.dir\\ /FS -c C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-8oc780\\src.cxx
+        C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-8oc780\\src.cxx(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -133,8 +133,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-cbxer9"
-      binary: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-cbxer9"
+      source: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-x4lxvq"
+      binary: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-x4lxvq"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -147,14 +147,14 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-cbxer9'
+        Change Dir: 'C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-x4lxvq'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_c2b16
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_c2b16.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_c2b16.dir\\ /FS -c C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-cbxer9\\CheckFunctionExists.cxx
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_c2b16.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_c2b16.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_c2b16.exe /implib:cmTC_c2b16.lib /pdb:cmTC_c2b16.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_c2b16.exe 
-        cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_c2b16.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_c2b16.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_c2b16.exe /implib:cmTC_c2b16.lib /pdb:cmTC_c2b16.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_c2b16.dir\\CheckFunctionExists.cxx.obj /out:cmTC_c2b16.exe /implib:cmTC_c2b16.lib /pdb:cmTC_c2b16.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_c2b16.dir/intermediate.manifest CMakeFiles\\cmTC_c2b16.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_fb8bd
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_fb8bd.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_fb8bd.dir\\ /FS -c C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-x4lxvq\\CheckFunctionExists.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_fb8bd.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_fb8bd.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_fb8bd.exe /implib:cmTC_fb8bd.lib /pdb:cmTC_fb8bd.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_fb8bd.exe 
+        cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_fb8bd.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_fb8bd.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_fb8bd.exe /implib:cmTC_fb8bd.lib /pdb:cmTC_fb8bd.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_fb8bd.dir\\CheckFunctionExists.cxx.obj /out:cmTC_fb8bd.exe /implib:cmTC_fb8bd.lib /pdb:cmTC_fb8bd.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_fb8bd.dir/intermediate.manifest CMakeFiles\\cmTC_fb8bd.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthreads.lib'
         ninja: build stopped: subcommand failed.
         
@@ -173,8 +173,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-vy0s8e"
-      binary: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-vy0s8e"
+      source: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-x9dee9"
+      binary: "C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-x9dee9"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -187,14 +187,14 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-vy0s8e'
+        Change Dir: 'C:/Project/PinOn/sony-sdk-customer/cmake-build-default/CMakeFiles/CMakeScratch/TryCompile-x9dee9'
         
-        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_44252
-        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_44252.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_44252.dir\\ /FS -c C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-vy0s8e\\CheckFunctionExists.cxx
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_44252.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_44252.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_44252.exe /implib:cmTC_44252.lib /pdb:cmTC_44252.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_44252.exe 
-        cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_44252.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_44252.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_44252.exe /implib:cmTC_44252.lib /pdb:cmTC_44252.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_44252.dir\\CheckFunctionExists.cxx.obj /out:cmTC_44252.exe /implib:cmTC_44252.lib /pdb:cmTC_44252.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_44252.dir/intermediate.manifest CMakeFiles\\cmTC_44252.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -v cmTC_ffd79
+        [1/2] C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DCHECK_FUNCTION_EXISTS=pthread_create /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\\cmTC_ffd79.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_ffd79.dir\\ /FS -c C:\\Project\\PinOn\\sony-sdk-customer\\cmake-build-default\\CMakeFiles\\CMakeScratch\\TryCompile-x9dee9\\CheckFunctionExists.cxx
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_ffd79.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ffd79.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_ffd79.exe /implib:cmTC_ffd79.lib /pdb:cmTC_ffd79.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_ffd79.exe 
+        cmd.exe /C "cd . && "C:\\Program Files\\JetBrains\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_ffd79.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ffd79.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_ffd79.exe /implib:cmTC_ffd79.lib /pdb:cmTC_ffd79.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~2\\2022\\PROFES~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_ffd79.dir\\CheckFunctionExists.cxx.obj /out:cmTC_ffd79.exe /implib:cmTC_ffd79.lib /pdb:cmTC_ffd79.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_ffd79.dir/intermediate.manifest CMakeFiles\\cmTC_ffd79.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthread.lib'
         ninja: build stopped: subcommand failed.
         
