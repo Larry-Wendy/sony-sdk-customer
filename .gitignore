@@ -1,5 +1,6 @@
 build
 out
+cmake-build-default
 .vs
 pictures/*
 !pictures/.gitignore
